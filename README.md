@@ -10,34 +10,36 @@ This project delves into the Framingham Heart Study dataset to develop a predict
 - Develop a predictive model to estimate the 10-year risk of CHD.
 
 ## Dataset Description
-The Framingham dataset comprises several key variables for CHD risk assessment:
+The Framingham dataset is a rich source of information for CHD risk assessment, encompassing:
 - **Demographic Information**: Age, gender, etc.
 - **Health Metrics**: Blood pressure, cholesterol levels, diabetes status.
 - **Lifestyle Data**: Smoking status, physical activity.
 - **Target Variable**: 10-year CHD risk.
-
+  
 ## Repository Structure
-- `README.md`: Provides an overview and guide for the project.
-- `data/`: Contains the Framingham dataset.
-- `scripts/`: R scripts for the project.
-  - `data_preparation.R`: For data cleaning and preparation.
-  - `exploratory_analysis.R`: For performing EDA.
-  - `model_building.R`: For creating the predictive model.
-- `docs/`: Documentation and additional materials.
-- `results/`: Output files, such as figures and model output.
+- `README.md`: Overview of the project.
+- `data/`:
+  - `framingham.csv`: Original dataset.
+  - `framingham_cleaned.csv`: Cleaned dataset after preprocessing.
+- `scripts/`: 
+  - `Framingham.R`: R script encompassing data preparation, analysis, and model development.
+- `docs/`: Documentation and analysis reports.
+  - `CHD_Risk_Analysis_Report.pdf`: Detailed report of the data analysis and modeling process.
 
 ## Tools and Technologies
 - **R Programming**
-- **Key Libraries**: Include libraries like tidyverse, caret, randomForest, etc.
+- **Key Libraries**: Include libraries like tidyverse, caret, ROSE, pROC..
 
 ## How to Run
-1. Ensure the installation of R and required libraries.
-2. Clone this repository to your system.
-3. Execute the R scripts sequentially:
+1. Install R and required libraries.
+2. Clone the repository to your system.
+3. Execute the R script:
    ```R
-   source("scripts/data_preparation.R")
-   source("scripts/exploratory_analysis.R")
-   source("scripts/model_building.R")
+   source("scripts/Framingham.R")
+
+## Model Development and Characteristics
+The Logistic Regression model, developed to predict the 10-year risk of CHD, was trained on a balanced dataset using SMOTE implemented via the ROSE package. The model demonstrated a moderate discriminative ability (AUC-ROC score: 0.7134) but highlighted a need for improvement in reducing false positives. Insights from this model will guide future enhancements, including feature engineering, alternative algorithm exploration, and hyperparameter tuning.
+
 ## Contributing
 We welcome contributions to this project! If you'd like to contribute, please follow these steps:
 1. Fork the repository.
