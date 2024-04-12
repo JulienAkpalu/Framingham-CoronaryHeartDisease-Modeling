@@ -1,9 +1,7 @@
 # Set the working directory
-setwd("C:/Users/julie/Desktop/GITHUB/Framingham")
-
+setwd("C:/Users/julien/Desktop/GITHUB/Framingham")
 
 ###### EXPLORATORY DATA ANALYSIS ######
-
 
 # Load necessary libraries
 library(ggplot2)
@@ -87,9 +85,7 @@ data$totChol <- cap_value(data$totChol, 350)  # Capping total cholesterol at 350
 write.csv(data, "framingham_cleaned.csv", row.names = FALSE)
 
 
-
 ####### Statistical Methods in Feature Selection and Analysis #######
-
 
 # Load necessary libraries
 library(readr)
@@ -137,9 +133,7 @@ conf_matrix <- table(Predicted = predicted_class, Actual = data$TenYearCHD)
 print(conf_matrix)
 
 
-
 ###### R Script for Predicting 10-Year Risk of CHD ######
-
 
 # Install and load necessary libraries
 install.packages("caret")
