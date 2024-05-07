@@ -28,7 +28,7 @@ The Framingham dataset is a rich source of information for CHD risk assessment, 
 
 ## Tools and Technologies
 - **R Programming**
-- **Key Libraries**: Include libraries like tidyverse, caret, ROSE, pROC..
+- **Key Libraries**: Include libraries like tidyverse, caret, ROSE, pROC.
 
 ## How to Run
 1. Install R and required libraries.
